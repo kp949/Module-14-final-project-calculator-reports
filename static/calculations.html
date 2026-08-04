@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Calculations</title>
+    <link rel="stylesheet" href="/static/auth.css">
+</head>
+<body>
+    <main class="wide">
+        <h1>Calculations</h1>
+
+        <form id="calculation-form">
+            <input id="calculation-id" type="hidden">
+
+            <label for="a">First Number</label>
+            <input id="a" name="a" type="number" step="any" required>
+
+            <label for="b">Second Number</label>
+            <input id="b" name="b" type="number" step="any" required>
+
+            <label for="type">Operation</label>
+            <select id="type" name="type" required>
+                <option value="Add">Add</option>
+                <option value="Sub">Subtract</option>
+                <option value="Multiply">Multiply</option>
+                <option value="Divide">Divide</option>
+            </select>
+
+            <button type="submit" id="save-button">Add Calculation</button>
+            <button type="button" id="reset-button" class="secondary">Clear Form</button>
+        </form>
+
+        <p id="message"></p>
+        <p id="detail"></p>
+
+        <h2>Saved Calculations</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Calculation</th>
+                    <th>Result</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="calculation-list"></tbody>
+        </table>
+
+        <p><a href="/static/login.html">Back to login</a></p>
+    </main>
+    <script src="/static/calculations.js"></script>
+</body>
+</html>
