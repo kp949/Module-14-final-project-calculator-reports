@@ -2,7 +2,7 @@ const message = document.getElementById("message");
 const recentCalculations = document.getElementById("recent-calculations");
 
 function getToken() {
-    return localStorage.getItem("token");
+    return localStorage.getItem("access_token");
 }
 
 function showValue(id, value) {
