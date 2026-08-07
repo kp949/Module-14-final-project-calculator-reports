@@ -1,4 +1,4 @@
-# Module 13 Reflection
+# Final PRoject Reflection
 
 In this module, I learned how login and registration work beyond just saving a user in the database. Before this, my project already had user models, password hashing, and calculation routes, but Module 13 connected those pieces to a real authentication flow. Creating JWT tokens helped me understand how an API can return proof that a user logged in successfully without sending the password back or storing it in plain text.
 
