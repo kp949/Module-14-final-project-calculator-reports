@@ -1,4 +1,4 @@
-# Module 14 Calculation BREAD Project
+# Module 14 final project calculator reports
 
 This is my Module 14 FastAPI project. It adds complete BREAD functionality for calculations: Browse, Read, Edit, Add, and Delete. Calculations are connected to the logged-in user through JWT authentication.
 
@@ -149,7 +149,7 @@ Authorization: Bearer your-jwt-token
 Docker Hub repository:
 
 ```text
-https://hub.docker.com/r/kp949/module14-calculation-bread
+https://hub.docker.com/r/kp949/final-project-calculation-reports
 ```
 
 ## GitHub Actions Secrets
@@ -162,13 +162,3 @@ DOCKERHUB_TOKEN
 ```
 
 The Docker Hub token should have read and write access.
-
-## Submission Screenshots
-
-For Canvas, include:
-
-- GitHub repository link
-- Screenshot of successful GitHub Actions run
-- Screenshot of Docker Hub showing the pushed image
-- Screenshots of the calculation page adding, listing, reading, editing, and deleting calculations
-- Reflection document
