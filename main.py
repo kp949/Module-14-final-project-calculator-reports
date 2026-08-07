@@ -24,6 +24,7 @@ from app.schemas import (
     UserLogin,
     UserRead,
     TokenResponse,
+    ReportSummary,
 )
 from app.security import create_access_token, decode_access_token, verify_password
 
@@ -228,6 +229,26 @@ def delete_calculation(
     crud.delete_calculation(db, calculation)
     return {"message": "Calculation deleted"}
 
+
+@app.get("/reports/summary", response_model=ReportSummary)
+def calculation_report_summary(
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    calculations = crud.get_calculations_for_user(db, current_user.id)
+    results = [calculation.result for calculation in calculations]
+
+    return {
+        "total_calculations": len(calculations),
+        "add_count": sum(1 for calculation in calculations if calculation.type == "Add"),
+        "subtract_count": sum(1 for calculation in calculations if calculation.type == "Sub"),
+        "multiply_count": sum(1 for calculation in calculations if calculation.type == "Multiply"),
+        "divide_count": sum(1 for calculation in calculations if calculation.type == "Divide"),
+        "average_result": sum(results) / len(results) if results else None,
+        "highest_result": max(results) if results else None,
+        "lowest_result": min(results) if results else None,
+        "recent_calculations": calculations[-5:],
+    }
 
 @app.post("/add")
 def add_numbers(request: CalculationRequest):

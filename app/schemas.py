@@ -82,3 +82,15 @@ class CalculationRead(BaseModel):
 
 class MessageResponse(BaseModel):
     message: str
+
+
+class ReportSummary(BaseModel):
+    total_calculations: int 
+    add_count: int
+    subtract_count: int
+    multiply_count: int
+    divide_count: int
+    average_result: float | None 
+    highest_result: float | None
+    lowest_result: float | None
+    recent_calculations: list[CalculationRead]
