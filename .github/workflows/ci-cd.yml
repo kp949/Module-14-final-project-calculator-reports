@@ -27,7 +27,7 @@ jobs:
 
     env:
       TEST_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/fastapi_test
-      DOCKER_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/module14-calculation-bread
+      DOCKER_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/final-project-calculation-reports
 
     steps:
       - name: Check out code
