@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Calculation Reports</title>
+    <link rel="stylesheet" href="/static/auth.css">
+</head>
+<body>
+    <main class="wide">
+        <h1>Calculation Reports</h1>
+
+        <p id="message"></p>
+
+        <section>
+            <h2>Summary</h2>
+            <ul>
+                <li>Total calculations: <span id="total-calculations">0</span></li>
+                <li>Add: <span id="add-count">0</span></li>
+                <li>Subtract: <span id="subtract-count">0</span></li>
+                <li>Multiply: <span id="multiply-count">0</span></li>
+                <li>Divide: <span id="divide-count">0</span></li>
+                <li>Average result: <span id="average-result">None</span></li>
+                <li>Highest result: <span id="highest-result">None</span></li>
+                <li>Lowest result: <span id="lowest-result">None</span></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Recent Calculations</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Calculation</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody id="recent-calculations"></tbody>
+            </table>
+        </section>
+
+        <p>
+            <a href="/static/calculations.html">Back to calculations</a>
+        </p>
+    </main>
+
+    <script src="/static/reports.js"></script>
+</body>
+</html>
